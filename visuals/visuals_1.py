@@ -13,7 +13,7 @@ def main():
 	boundary = pygame.image.load("boundary.png")
 	center_dot = pygame.image.load("center.png")
 	center = [1280,720]
-	radial_v = 3
+	radial_v = 0
 
 	object1 = object([1280,220],[radial_v,0])
 	object2 = object([1780,720],[0,radial_v])
@@ -62,7 +62,7 @@ def updateScreen(screen,boundary,center_dot,objects):
 	screen.fill((0,0,0))
 	screen.blit(boundary,(560,0))
 	screen.blit(center_dot,(1255,695))
-	for i in range(8):
+	for i in range(1):
 		screen.blit(objects[i].image,(objects[i].getPosition()[0]-72,objects[i].getPosition()[1]-72))
 	pygame.display.update()
 
